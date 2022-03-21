@@ -10,6 +10,13 @@ class LinearSearch {
         return -1;
     }
 
+    public static int linearSearch(String[] list, String key) {
+        for (int i = 0; i < list.length; i++) {
+            if (list[i].equalsIgnoreCase(key)) { return i; }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         int[] list = {4, 5, 1, 2, 9, -3};
         System.out.println(linearSearch(list, 2));

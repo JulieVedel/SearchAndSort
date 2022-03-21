@@ -1,5 +1,7 @@
 package FilEksempler;
 
+import java.util.Arrays;
+
 class HeapSort {
     /** Heap sort method */
     public static <E extends Comparable<E>> void heapSort(E[] list) {
@@ -13,6 +15,20 @@ class HeapSort {
         // Remove elements from the heap
         for (int i = list.length - 1; i >= 0; i--)
             list[i] = heap.remove();
+        System.out.println(Arrays.toString(list));
+    }
+
+    public static void heapSort(String[] list) {
+        StringHeap stringHeap = new StringHeap();
+
+        for (int i = 0; i < list.length; i++) {
+            stringHeap.add(list[i]);
+        }
+
+        for (int i = list.length - 1; i >= 0; i--) {
+            list[i] = stringHeap.remove();
+        }
+        System.out.println(Arrays.toString(list));
     }
 
     /** A test method */
